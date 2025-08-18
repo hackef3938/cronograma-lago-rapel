@@ -1,94 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Cronograma - Congregación Lago Rapel</title>
-  <style>
-    body {
-      background: #f4f9f9;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #00695c;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: white;
-      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background: #00695c;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background: #f9f9f9;
-    }
-    tr:hover {
-      background: #e0f2f1;
-    }
-    a {
-      color: #1565c0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <h1>Cronograma - Semana del 11 de Agosto</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Encuentro</th>
-        <th>Dirección</th>
-        <th>Territorio</th>
-        <th>N°</th>
-        <th>Encargado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Lunes 11</td>
-        <td>10:00 - 12:00</td>
-        <td>Diesel Los Lagos</td>
-        <td>Diesel Los Lagos</td>
-        <td>Diesel Los Lagos</td>
-        <td>36</td>
-        <td>Guillermo Carvajal</td>
-      </tr>
-      <tr>
-        <td>Martes 12</td>
-        <td>09:00 - 12:00</td>
-        <td><a href="#">Zoom (ID: 614 873 5306)</a></td>
-        <td>Escuela Los Aromos</td>
-        <td>Escuela Los Aromos</td>
-        <td>45</td>
-        <td>Jhonatan Chavez</td>
-      </tr>
-      <tr>
-        <td>Miércoles 13</td>
-        <td>09:30 - 11:30</td>
-        <td>Plaza Central</td>
-        <td>Plaza de Lago Rapel</td>
-        <td>Zona Centro</td>
-        <td>22</td>
-        <td>María López</td>
-      </tr>
-      <!-- 👉 Aquí puedes seguir agregando más filas para el resto de la semana -->
-    </tbody>
-  </table>
-</body>
-</html>
+<table class="table table-bordered text-center">
+  <thead style="background:#0d47a1; color:white;">
+    <tr>
+      <th>FECHA</th>
+      <th>HORA</th>
+      <th>ENCUENTRO</th>
+      <th>DIRECCIÓN</th>
+      <th>TERRITORIO</th>
+      <th>N°</th>
+      <th>ENCARGADO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#bbdefb;">
+      <td><b>Lunes 18</b></td>
+      <td>10:00 - 12:00</td>
+      <td>Pasado la parcelación PORTON AZUL</td>
+      <td>Alto el Manzano</td>
+      <td><a href="#" onclick="cargarTerritorio('territorios/diesel_los_lagos.kml')">Diesel Los Lagos</a></td>
+      <td>36</td>
+      <td>Modesto Abarca</td>
+    </tr>
+    <tr style="background:#90caf9;">
+      <td></td>
+      <td>19:00 - 21:00</td>
+      <td><a href="https://zoom.us/j/6148735306?pwd=mateo2414" target="_blank">Zoom ID: 614 873 5306</a></td>
+      <td></td>
+      <td>Predicación: "Telefónica y cartas"</td>
+      <td></td>
+      <td>Guillermo Carvajal</td>
+    </tr>
+    <tr style="background:#bbdefb;">
+      <td><b>Martes 19</b></td>
+      <td>10:00 - 12:00</td>
+      <td>Apr Los Aromos</td>
+      <td>Apr Los Aromos</td>
+      <td><a href="#" onclick="cargarTerritorio('territorios/los_aromos.kml')">Los Aromos</a></td>
+      <td>46</td>
+      <td>Felipe Jimenez</td>
+    </tr>
+    <!-- Sigues con el resto de filas -->
+  </tbody>
+</table>

@@ -1,5 +1,83 @@
-#map { height: 500px; width: 100%; margin-bottom: 20px; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-form { margin-top: 20px; }
-input, button { padding: 8px; margin-right: 10px; }
+/* Reset y fuente */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Encabezados */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1b3a57;
+}
+
+/* Cronograma */
+#schedule {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#schedule div {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+  color: #1b3a57;
+}
+
+/* Mapa */
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #1b3a57;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #29516d;
+}
+
+/* Responsivo */
+@media(max-width:600px){
+  #schedule {
+    grid-template-columns: 1fr;
+  }
+  form {
+    flex-direction: column;
+  }
+}

@@ -1,3 +1,4 @@
+
 function updateSchedule() {
   const scheduleDiv = document.getElementById('schedule');
   const today = new Date();
@@ -12,12 +13,21 @@ function updateSchedule() {
     week = week.map((item, index) => `Día ${index+1}: Actividad actualizada`);
   }
 
-  // En lugar de tabla, usamos tarjetas div
+  // Crear tarjetas con animación de entrada
   let html = '';
-  week.forEach(day => {
-    html += `<div>${day}</div>`;
+  week.forEach((day, idx) => {
+    html += `<div style="animation: fadeIn 0.5s ease forwards; animation-delay: ${idx * 0.1}s;">${day}</div>`;
   });
   scheduleDiv.innerHTML = html;
 }
 
 updateSchedule();
+
+// Animación CSS inyectada desde JS
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(10px);}
+  100% {opacity: 1; transform: translateY(0);}
+}`;
+document.head.appendChild(style);

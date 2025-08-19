@@ -2,26 +2,31 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cronograma y Territorios</title>
+  <title>Cronograma Lago Rapel</title>
   <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <h1>Cronograma Semanal</h1>
-  <div id="schedule"></div>
+  <h1>Cronograma – Lago Rapel</h1>
 
-  <h1>Mapa de Territorios</h1>
-  <div id="map"></div>
+  <!-- Barra de búsqueda -->
+  <input type="text" id="search" placeholder="Buscar..." onkeyup="buscarFila()">
 
-  <h2>Actualizar Avances</h2>
-  <form id="avanceForm">
-    <input type="text" id="territorio" placeholder="Nombre del territorio" required>
-    <input type="text" id="avance" placeholder="Avance" required>
-    <button type="submit">Enviar</button>
-  </form>
+  <table id="cronograma">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Dirección</th>
+        <th>Territorio</th>
+        <th>N°</th>
+        <th>Encargado</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-body">
+      <!-- Aquí se carga dinámicamente con script.js -->
+    </tbody>
+  </table>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
